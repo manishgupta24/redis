@@ -6,7 +6,7 @@ This repository contains **Dockerfile** of [Redis](http://redis.io/) for [Docker
 
 ### Base Docker Image
 
-* [dockerfile/ubuntu](http://dockerfile.github.io/#/ubuntu)
+* [ubuntu:bionic](http://dockerfile.github.io/#/ubuntu)
 
 
 ### Installation
@@ -22,15 +22,15 @@ This repository contains **Dockerfile** of [Redis](http://redis.io/) for [Docker
 
 #### Run `redis-server`
 
-    docker run -d --name redis -p 6379:6379 dockerfile/redis
+    docker run -d --name redis -p 6379:6379 manish24/redis
 
 #### Run `redis-server` with persistent data directory. (creates `dump.rdb`)
 
-    docker run -d -p 6379:6379 -v <data-dir>:/data --name redis dockerfile/redis
+    docker run -d -p 6379:6379 -v <data-dir>:/data --name redis manish24/redis
 
-#### Run `redis-server` with persistent data directory and password.
+#### Run `redis-server` with persistent data directory and password. Default Password is redis12345.
 
-    docker run -d -p 6379:6379 -v <data-dir>:/data --name redis dockerfile/redis redis-server /etc/redis/redis.conf --requirepass <password>
+    docker run -d -p 6379:6379 -v <data-dir>:/data --name redis manish24/redis redis-server /etc/redis/redis.conf --requirepass <password>
 
 #### Run `redis-cli`
 
