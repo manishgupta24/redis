@@ -7,8 +7,6 @@
 # Pull base image.
 FROM ubuntu:bionic
 
-ENV port 6379
-
 # Install Redis.
 RUN \
   apt-get update && \
@@ -38,4 +36,4 @@ WORKDIR /data
 CMD ["redis-server", "/etc/redis/redis.conf"]
 
 # Expose ports.
-EXPOSE $port
+EXPOSE 6379

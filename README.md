@@ -1,21 +1,22 @@
 ## Redis Dockerfile
 
 
-This repository contains **Dockerfile** of [Redis](http://redis.io/) for [Docker](https://www.docker.com/)'s [automated build](https://registry.hub.docker.com/u/dockerfile/redis/) published to the public [Docker Hub Registry](https://registry.hub.docker.com/).
+This repository contains **Dockerfile** of [Redis](http://redis.io/) for [Docker](https://www.docker.com/)'s published to the public [Docker Hub](https://hub.docker.com/r/manish24/redis).
+
 
 
 ### Base Docker Image
 
-* [ubuntu:bionic](http://dockerfile.github.io/#/ubuntu)
+* [ubuntu:bionic](https://hub.docker.com/_/ubuntu)
 
 
 ### Installation
 
 1. Install [Docker](https://www.docker.com/).
 
-2. Download [automated build](https://registry.hub.docker.com/u/dockerfile/redis/) from public [Docker Hub Registry](https://registry.hub.docker.com/): `docker pull dockerfile/redis`
+2. Pull image from docker repository: `docker pull manish24/redis`
 
-   (alternatively, you can build an image from Dockerfile: `docker build -t="dockerfile/redis" github.com/dockerfile/redis`)
+   (alternatively, you can build an image from Dockerfile: `docker build -t="manish24/redis" https://github.com/manishgupta24/redis/blob/master/Dockerfile`)
 
 
 ### Usage
@@ -34,4 +35,4 @@ This repository contains **Dockerfile** of [Redis](http://redis.io/) for [Docker
 
 #### Run `redis-cli`
 
-    docker run -it --rm --link redis:redis dockerfile/redis bash -c 'redis-cli -h redis'
+    docker run -it --rm --link redis:redis manish24/redis bash -c 'redis-cli -h redis'
